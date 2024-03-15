@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>お問い合わせ</title>
+  <%= csrf_meta_tags %>
+  <%= csp_meta_tag %>
+  <%= javascript_importmap_tags %>
+  <%= stylesheet_link_tag "reset", "style", "https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap" %>
+  <%= stylesheet_link_tag "https://fonts.gstatic.com" %>
+</head>
+
+
+  <body>
+
+  <header id="header" class="DownMove">
+    <%= link_to "https://www.ibco.ltd/index.html#one" do %>
+      <div class="logo">
+        <%= image_tag("logo.svg", alt: "") %>
+      </div>
+    <% end %>
+    <div class="nav">
+      <ul>
+        <li> <%= link_to "https://www.ibco.ltd/index.html#one" do %>
+          <div class="top">ホーム</div>
+          <div class="bottom">HOME</div>
+            <% end %></li>
+        <li><%= link_to "https://www.ibco.ltd/index.html#two" do %>
+          <div class="top">サービス</div>
+          <div class="bottom">SERVICE</div>
+        <% end %></li>
+        <li><%= link_to "https://www.ibco.ltd/index.html#flow" do %>
+          <div class="top">制作の流れ</div>
+          <div class="bottom">FLOW</div>
+        <% end %></li>
+        <li><%= link_to "https://www.ibco.ltd/index.html#faq" do %>
+          <div class="top">よくある質問</div>
+          <div class="bottom">FAQ</div>
+        <% end %></li>
+        <li><%= link_to "https://www.ibco.ltd/company.html" do %>
+          <div class="top">会社概要</div>
+          <div class="bottom">COMPANY</div>
+        <% end %></li>
+        <li><%= link_to(new_contact_path) do %>
+          <div class="top">お問い合わせ</div>
+          <div class="bottom">CONTACT</div>
+        <% end %></li>
+      </ul>
+      
+
+      <div class="openbtn4"><span></span><span></span><span></span></div>
+<div class="menu">
+  <ul class="rb">
+    <li class="rb">
+      <%= link_to "https://www.ibco.ltd/index.html#one" do %>
+        <div class="top">ホーム</div>
+        <div class="bottom">HOME</div>
+      <% end %>
+    </li>
+    <li class="rb">
+      <%= link_to "https://www.ibco.ltd/index.html#two" do %>
+        <div class="top">サービス</div>
+        <div class="bottom">SERVICE</div>
+      <% end %>
+    </li>
+    <li class="rb">
+      <%= link_to "https://www.ibco.ltd/index.html#flow" do %>
+        <div class="top">制作の流れ</div>
+        <div class="bottom">FLOW</div>
+      <% end %>
+    </li>
+    <li class="rb">
+      <%= link_to "https://www.ibco.ltd/index.html#faq" do %>
+        <div class="top">よくある質問</div>
+        <div class="bottom">FAQ</div>
+      <% end %>
+    </li>
+    <li class="rb">
+      <%= link_to "https://www.ibco.ltd/company.html" do %>
+        <div class="top">会社概要</div>
+        <div class="bottom">COMPANY</div>
+      <% end %>
+    </li>
+    <li class="rb">
+      <%= link_to(new_contact_path,) do %>
+        <div class="top">お問い合わせ</div>
+        <div class="bottom">CONTACT</div>
+      <% end %>
+    </li>
+  </ul>
+</div>
+
+    </div>
+    </header>
+
+    <%= yield %>
+
+    <footer>
+    <div class="footer">
+      <div class="container">
+        <div class="title">
+          <h1>Contact</h1>
+          <h3>無料相談 / お問い合わせ</h3>
+        </div>
+        <h5>
+          ホームページ制作や運用に関するお悩みやご相談、サービスに関するご質問等にお答えします。<br>
+          お気軽にご相談ください。
+        </h5>
+
+        <div class="info">
+          <h2>株式会社IB.</h2>
+          <div class="contents">
+            <p class="text">〒441-8124 <br> 愛知県豊橋市野依町字西新切91番地の2</p>
+            <p class="text">営業時間&nbsp;:&nbsp;9:30〜17:30</p>
+            <p class="tel"><a href="tel:080-1582-5410">TEL&nbsp;:&nbsp;080-1582-5410</a></p>
+            <p class="text"><a href="mailto:info@ibco.ltd">E-mail&nbsp;:&nbsp;info@ibco.ltd</a></p>
+          </div>
+          <small>&copy; IB. CO.,LTD ALL RIGHTS RESERVED</small>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+
+
+  </body>
+</html>
