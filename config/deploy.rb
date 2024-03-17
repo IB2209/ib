@@ -16,8 +16,7 @@ set :default_env, {
 }
 
 append :linked_files, "config/master.key"
-
-append :rbenv_map_bins, 'bundle' # この行を追加
+append :rbenv_map_bins, 'bundle'
 
 namespace :deploy do
   desc "Upload master key"
