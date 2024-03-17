@@ -22,9 +22,19 @@ namespace :deploy do
   desc "Upload master key"
   task :upload_master_key do
     on roles(:app) do
-      upload!("/Users/ib.//ema/ib/config/master.key", "#{shared_path}/config/master.key")
+      upload!("/Users/ib./ema/ib/config/master.key", "#{shared_path}/config/master.key")
+    end
+  end
+
+  desc "Restart unicorn"
+  task :restart_unicorn do
+    on roles(:app) do
+      within release_path do
+        execute :bundle, "exec unicorn -c config/unicorn.rb -E #{fetch(:stage)} -D"
+      end
     end
   end
 end
 
 after "deploy:check:linked_files", "deploy:upload_master_key"
+after "deploy:published", "deploy:restart_unicorn"
