@@ -12,7 +12,7 @@ set :rbenv_ruby, '3.3.0'
 set :log_level, :debug
 set :default_env, {
   rbenv_root: "/home/rails/.rbenv",
-  path: "/home/rails/.rbenv/bin:$PATH"
+  path: "/root/.rbenv/shims:/root/.rbenv/plugins/ruby-build/bin:/root/.rbenv/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin"
 }
 
 append :linked_files, "config/master.key"
