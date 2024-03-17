@@ -11,8 +11,8 @@ set :keep_releases, 5
 set :rbenv_ruby, '3.3.0'
 set :log_level, :debug
 set :default_env, {
-  rbenv_root: "/Users/ib./.rbenv",
-  path: "/Users/ib./.rbenv/bin:$PATH"
+  rbenv_root: "/home/rails/.rbenv",
+  path: "/home/rails/.rbenv/bin:$PATH"
 }
 
 append :linked_files, "config/master.key"
