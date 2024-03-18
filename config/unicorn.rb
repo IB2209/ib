@@ -1,7 +1,7 @@
 # unicorn.rb
 
 # アプリケーションのディレクトリを指定します
-working_directory "/var/www/ib/current"
+working_directory "/var/www/ib./current"
 
 
 # ポートの設定
