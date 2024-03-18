@@ -10,9 +10,12 @@ require "capistrano/bundler"
 require "capistrano/rails/assets" # アセットをプリコンパイルするため
 require "capistrano/rails/migrations" # マイグレーションをするため
 
-require "capistrano/puma" # ここを修正
-install_plugin Capistrano::Puma # CapistranoとPumaを連携
-install_plugin Capistrano::Puma::Nginx # PumaとNginxを連携
+# CapistranoのPumaプラグインが定義されているかどうかを確認し、定義されていればロードする
+if defined?(Capistrano::Puma)
+  require "capistrano/puma"
+  install_plugin Capistrano::Puma # CapistranoとPumaを連携
+  install_plugin Capistrano::Puma::Nginx # PumaとNginxを連携
+end
 
 # Load custom tasks from `lib/capistrano/tasks` if you have any defined
 Dir.glob("lib/capistrano/tasks/*.rake").each { |r| import r }
