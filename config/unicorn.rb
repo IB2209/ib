@@ -1,7 +1,8 @@
 # unicorn.rb
 
 # アプリケーションのディレクトリを指定します
-working_directory '/Users/ib./ema/ib'
+working_directory "/var/www/ib/current"
+
 
 # ポートの設定
 listen 443
