@@ -3,7 +3,6 @@
 # アプリケーションのディレクトリを指定します
 working_directory "/var/www/ib./current"
 
-
 # ポートの設定
 listen 443
 
@@ -15,4 +14,5 @@ stderr_path '/Users/ib./ema/ib/log/unicorn.stderr.log'
 stdout_path '/Users/ib./ema/ib/log/unicorn.stdout.log'
 
 # デーモン化
-daemonize true
+daemonized
+
