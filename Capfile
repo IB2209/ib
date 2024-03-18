@@ -1,3 +1,5 @@
+# Capfile
+
 require "capistrano/setup"
 require "capistrano/deploy"
 require "capistrano/scm/git"
@@ -8,7 +10,7 @@ require "capistrano/bundler"
 require "capistrano/rails/assets" # アセットをプリコンパイルするため
 require "capistrano/rails/migrations" # マイグレーションをするため
 
-require "capistrano/puma"
+require "capistrano/puma" # ここを修正
 install_plugin Capistrano::Puma # CapistranoとPumaを連携
 install_plugin Capistrano::Puma::Nginx # PumaとNginxを連携
 
