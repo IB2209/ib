@@ -6,7 +6,7 @@ default: &default
   password: <%= ENV['IB_DATABASE_PASSWORD'] %>
   host: <%= ENV['DB_HOST'] || 'localhost' %>
   port: <%= ENV['DB_PORT'] || '3306' %>
-  database: <%= ENV['DB_NAME'] %>
+  database: <%= ENV['DATABASE_NAME_PROD'] %>
 
 production:
   <<: *default
