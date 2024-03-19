@@ -75,3 +75,5 @@ end
 gem 'mail'
 
 gem 'puma'
+
+gem 'rake'
