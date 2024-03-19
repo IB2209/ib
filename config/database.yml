@@ -6,17 +6,6 @@ default: &default
   socket: /tmp/mysql.sock
 
 
-development:
-  <<: *default
-  database: <%= ENV['DATABASE_NAME_DEV'] %>
-  username: <%= ENV["DATABASE_USERNAME"] %>
-  password: <%= ENV["DATABASE_PASSWORD"] %>
-  
-
-test:
-  <<: *default
-  database: <%= ENV['DATABASE_NAME_TEST'] %>
-
 production:
   <<: *default
   database: <%= ENV['DATABASE_NAME_PROD'] %>
