@@ -35,9 +35,6 @@ plugin :tmp_restart
 # アプリケーションの事前読み込みを許可します。
 preload_app!
 
-# アプリケーションの起動方法を指定します。
-rackup      DefaultRackup
-
 # ポート番号と環境のデフォルト値を指定します。
 port        ENV['PORT']     || 3000
 environment ENV['RACK_ENV'] || 'development'
@@ -46,3 +43,7 @@ environment ENV['RACK_ENV'] || 'development'
 on_worker_boot do
   ActiveRecord::Base.establish_connection if defined?(ActiveRecord)
 end
+
+# Railsアプリケーションのコンフィグファイルを指定します。
+app_dir = File.expand_path("../..", __FILE__)
+rackup "#{app_dir}/config.ru"
