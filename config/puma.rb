@@ -46,4 +46,4 @@ end
 
 # Railsアプリケーションのコンフィグファイルを指定します。
 app_dir = File.expand_path("../..", __FILE__)
-rackup "#{app_dir}/config.ru"
+rackup DefaultRackup
