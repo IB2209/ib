@@ -5,7 +5,7 @@ lock "~> 3.18.1"
 
 set :application, "ib."
 set :repo_url, "git@github.com:IB2209/ib.git"
-set :user, "deploy"
+set :user, "ib"
 set :branch, "main"
 set :deploy_to, '/var/www/ib.'
 set :rbenv_type, :user
