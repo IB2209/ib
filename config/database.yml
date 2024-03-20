@@ -4,11 +4,11 @@ default: &default
   adapter: mysql2
   encoding: utf8
   pool: <%= ENV.fetch("DB_POOL") { 5 } %>
-  username: <%= ENV['IB_DATABASE_USERNAME'] || 'ib' %>
-  password: <%= ENV['IB_DATABASE_PASSWORD'] || 'Jakeismybrother_0508'%>
+  username: <%= ENV['IB_DATABASE_USERNAME'] %>
+  password: <%= ENV['IB_DATABASE_PASSWORD'] %>
   host: <%= ENV['DB_HOST'] || 'localhost' %>
   port: <%= ENV['DB_PORT'] || '3306' %>
-  database: <%= ENV['DATABASE_NAME_PROD'] || 'ib_production' %>
+  database: <%= ENV['DATABASE_NAME_PROD'] %>
 
 production:
   <<: *default
