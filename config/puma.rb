@@ -27,11 +27,6 @@ pidfile ENV.fetch("PIDFILE") { "tmp/pids/server.pid" }
 # アプリケーションの事前読み込みを許可します
 preload_app!
 
-# ワーカーブート時にActiveRecordの接続を確立します
-on_worker_boot do
-  ActiveRecord::Base.establish_connection if defined?(ActiveRecord)
-end
-
 # Railsアプリケーションのコンフィグファイルを指定します
 app_dir = File.expand_path("../..", __FILE__)
-rackup DefaultRackup # ここでDefaultRackupをロードしています
+rackup DefaultRackup
