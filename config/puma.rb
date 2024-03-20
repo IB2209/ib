@@ -27,6 +27,7 @@ pidfile ENV.fetch("PIDFILE") { "tmp/pids/server.pid" }
 # アプリケーションの事前読み込みを許可します
 preload_app!
 
+
 # Railsアプリケーションのコンフィグファイルを指定します
 app_dir = File.expand_path("../..", __FILE__)
-rackup DefaultRackup
+rackup DefaultRackup, app_dir + '/config.ru'
