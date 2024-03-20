@@ -17,7 +17,11 @@ set :bundle_jobs, 2
 
 # リリース間で共有するリソースのファイルパスを書く
 append :linked_files, "config/database.yml", "config/master.key"
-append :linked_files, ".env"
+# deploy.rb
+
+# .envファイルをリンクする
+append :linked_files, "config/.env"
+
 
 # 各リリースが共通で読み込むディレクトリを設定する
 append :linked_dirs, "log", "tmp/pids", "tmp/cache", "tmp/sockets",  '.bundle'
