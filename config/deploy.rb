@@ -1,3 +1,5 @@
+#deploy.rb
+
 # config valid for current version and patch releases of Capistrano
 lock "~> 3.18.1"
 
@@ -14,7 +16,8 @@ set :rbenv_prefix, "RBENV_ROOT=#{fetch(:rbenv_path)} RBENV_VERSION=#{fetch(:rben
 set :bundle_jobs, 2
 
 # リリース間で共有するリソースのファイルパスを書く
-append :linked_files, "config/master.key"
+append :linked_files, "config/database.yml", "config/master.key"
+append :linked_files, ".env"
 
 # 各リリースが共通で読み込むディレクトリを設定する
 append :linked_dirs, "log", "tmp/pids", "tmp/cache", "tmp/sockets",  '.bundle'

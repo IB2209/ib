@@ -1,3 +1,4 @@
+#production.rb
 
   # サーバの設定
 server "ibwww.com", user: "deploy", roles: %w{web db app}
