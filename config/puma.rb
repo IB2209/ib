@@ -1,5 +1,7 @@
 # Pumaの設定ファイル
 
+#bind "unix://var/local/work/ib./tmp/sockets/puma.sock"
+
 # 最大スレッド数と最小スレッド数を設定します
 max_threads_count = ENV.fetch("RAILS_MAX_THREADS") { 5 }
 min_threads_count = ENV.fetch("RAILS_MIN_THREADS") { max_threads_count }
@@ -30,4 +32,4 @@ preload_app!
 
 # Railsアプリケーションのコンフィグファイルを指定します
 app_dir = File.expand_path("../..", __FILE__)
-rackup DefaultRackup, app_dir + '/config.ru'
+rackup DefaultRackup
