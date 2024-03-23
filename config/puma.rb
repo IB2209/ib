@@ -8,7 +8,7 @@ rails_env = ENV.fetch('RAILS_ENV') { 'development' }
 # socket
 bind "unix:/var/www/ib./shared/tmp/sockets/puma.sock"
 
-rails_root = Rails.root
+rails_root = File.expand_path('..', __dir__)
 state_path File.join(rails_root, 'tmp', 'pids', 'puma.state')
 stdout_redirect(
   File.join(rails_root, 'log', 'puma.log'),
@@ -23,7 +23,7 @@ daemonize true
 environment rails_env
 
 # Specifies the `pidfile` that Puma will use.
-pidfile ENV.fetch("PIDFILE") { "tmp/pids/server.pid" }
+pidfile File.join(rails_root, 'tmp', 'pids', 'server.pid')
 
 # Allow puma to be restarted by `rails restart` command.
 plugin :tmp_restart
