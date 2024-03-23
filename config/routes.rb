@@ -1,3 +1,5 @@
+#routes.rb
+
 Rails.application.routes.draw do
   # お問い合わせフォーム用のルーティング
   resources :contacts, only: [:new, :create]

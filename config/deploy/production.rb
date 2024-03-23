@@ -3,6 +3,7 @@
   # サーバの設定
 server "ibwww.com", user: "deploy", roles: %w{web db app}
 
+
 # ssh接続設定
 set :ssh_options, {
   user: fetch(:user),

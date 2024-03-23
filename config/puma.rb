@@ -1,9 +1,9 @@
+rails_env = ENV.fetch('RAILS_ENV') { 'production' }
+
 # Pumaの設定ファイル
 
 threads_count = ENV.fetch("RAILS_MAX_THREADS") { 5 }
 threads threads_count, threads_count
-
-rails_env = ENV.fetch('RAILS_ENV') { 'production' }
 
 # socket
 bind "unix:/var/www/ib./shared/tmp/sockets/puma.sock"
@@ -20,6 +20,8 @@ stdout_redirect(
 
 # Specifies the `environment` that Puma will run in.
 environment rails_env
+
+run Rails.application
 
 # Specifies the `pidfile` that Puma will use.
 pidfile File.join(rails_root, 'tmp', 'pids', 'server.pid')
