@@ -3,7 +3,7 @@
 threads_count = ENV.fetch("RAILS_MAX_THREADS") { 5 }
 threads threads_count, threads_count
 
-rails_env = ENV.fetch('RAILS_ENV') { 'development' }
+rails_env = ENV.fetch('RAILS_ENV') { 'production' }
 
 # socket
 bind "unix:/var/www/ib./shared/tmp/sockets/puma.sock"

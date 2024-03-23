@@ -1,5 +1,3 @@
-require "active_support/core_ext/integer/time"
-
 Rails.application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
 
@@ -83,7 +81,6 @@ Rails.application.configure do
     authentication:       'plain',
     enable_starttls_auto: true
   }
-
 
   # Ignore bad email addresses and do not raise email delivery errors.
   # Set this to true and configure the email server for immediate delivery to raise delivery errors.
