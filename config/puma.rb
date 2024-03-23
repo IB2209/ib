@@ -6,7 +6,7 @@ threads threads_count, threads_count
 rails_env = ENV.fetch('RAILS_ENV') { 'development' }
 
 # socket
-bind "unix:/var/www/ib/shared/tmp/sockets/puma.sock"
+bind "unix:/var/www/ib./shared/tmp/sockets/puma.sock"
 
 rails_root = Dir.pwd
 state_path File.join(rails_root, 'tmp', 'pids', 'puma.state')
