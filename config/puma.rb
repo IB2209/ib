@@ -9,10 +9,12 @@ rails_env = ENV.fetch('RAILS_ENV') { 'development' }
 bind "unix:/var/www/ib./shared/tmp/sockets/puma.sock"
 
 rails_root = File.expand_path('..', __dir__)
+log_dir = '/var/www/ib./shared/log'  # 新しいログディレクトリのパス
+
 state_path File.join(rails_root, 'tmp', 'pids', 'puma.state')
 stdout_redirect(
-  File.join(rails_root, 'log', 'puma.log'),
-  File.join(rails_root, 'log', 'puma-error.log'),
+  File.join(log_dir, 'puma.log'),           # 標準出力ログファイルのパスを変更
+  File.join(log_dir, 'puma-error.log'),     # 標準エラー出力ログファイルのパスを変更
   true
 )
 
