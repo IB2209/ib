@@ -18,9 +18,6 @@ stdout_redirect(
   true
 )
 
-# daemonizeを有効にする
-daemonize true
-
 # Specifies the `environment` that Puma will run in.
 environment rails_env
 
