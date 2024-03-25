@@ -1,5 +1,5 @@
 # Specifies the `environment` that Puma will run in.
-environment ENV.fetch('RAILS_ENV') { 'production' }
+environment 'production'
 
 
 # Pumaの設定ファイル
@@ -21,7 +21,6 @@ stdout_redirect(
   true
 )
 
-run Rails.application
 
 # Specifies the `pidfile` that Puma will use.
 pidfile File.join(rails_root, 'tmp', 'pids', 'server.pid')
