@@ -1,6 +1,9 @@
-rails_env = ENV.fetch('RAILS_ENV') { 'production' }
+# Specifies the `environment` that Puma will run in.
+environment ENV.fetch('RAILS_ENV') { 'production' }
+
 
 # Pumaの設定ファイル
+
 
 threads_count = ENV.fetch("RAILS_MAX_THREADS") { 5 }
 threads threads_count, threads_count
@@ -17,9 +20,6 @@ stdout_redirect(
   File.join(log_dir, 'puma-error.log'),     # 標準エラー出力ログファイルのパスを変更
   true
 )
-
-# Specifies the `environment` that Puma will run in.
-environment rails_env
 
 run Rails.application
 
