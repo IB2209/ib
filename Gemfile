@@ -77,3 +77,5 @@ gem 'mail'
 gem 'puma'
 
 gem 'rake'
+
+gem 'redis'
