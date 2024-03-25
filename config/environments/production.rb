@@ -82,6 +82,9 @@ Rails.application.configure do
     enable_starttls_auto: true
   }
 
+  # キャッシュの設定（Redisを使用する場合）
+  config.cache_store = :redis_cache_store, { url: ENV['REDIS_URL'] }
+
   # Ignore bad email addresses and do not raise email delivery errors.
   # Set this to true and configure the email server for immediate delivery to raise delivery errors.
   # config.action_mailer.raise_delivery_errors = false
