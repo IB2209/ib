@@ -1,3 +1,5 @@
+require File.expand_path('../config/environment', __dir__)
+
 Rails.application.configure do
 
 
