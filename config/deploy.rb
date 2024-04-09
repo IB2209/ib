@@ -13,7 +13,7 @@ set :rbenv_ruby, File.read('.ruby-version').strip
 set :rbenv_prefix, "RBENV_ROOT=#{fetch(:rbenv_path)} RBENV_VERSION=#{fetch(:rbenv_ruby)} #{fetch(:rbenv_path)}/bin/rbenv exec"
 
 set :ssh_options, {
-  keys: %w(/Users/ib./.ssh/ib.pem),
+  keys: %w(/home/deploy/.ssh/ib.pem),
   forward_agent: false,
   auth_methods: %w(publickey)
 }
