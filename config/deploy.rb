@@ -7,7 +7,7 @@ set :application, "ib."
 set :repo_url, "git@github.com:IB2209/ib.git"
 set :user, "ib"
 set :branch, "main"
-set :deploy_to, '/var/www/ib.'
+set :deploy_to, '/home/deploy/ib.'
 set :rbenv_type, :user
 set :rbenv_ruby, File.read('.ruby-version').strip
 set :rbenv_prefix, "RBENV_ROOT=#{fetch(:rbenv_path)} RBENV_VERSION=#{fetch(:rbenv_ruby)} #{fetch(:rbenv_path)}/bin/rbenv exec"
